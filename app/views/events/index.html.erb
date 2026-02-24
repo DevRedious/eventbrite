@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <h1 class="display-4">Événements</h1>
+    <p class="lead">Découvrez les événements de votre ville.</p>
+    <%= link_to "Créer un événement", new_event_path, class: "btn btn-primary btn-lg" %>
+  </div>
+  <div class="row">
+    <% @events.each do |event| %>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= event.title %></h5>
+            <p class="card-text"><%= event.start_date.strftime("%d/%m/%Y %H:%M") %></p>
+            <%= link_to "Voir", event_path(event), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

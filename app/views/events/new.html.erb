@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Créer un événement</h1>
+  <%= form_with model: @event, local: true do |f| %>
+    <div class="mb-3">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+      <% @event.errors[:title].each do |msg| %><span class="text-danger"><%= msg %></span><% end %>
+    </div>
+    <div class="mb-3">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= f.label :start_date %>
+      <%= f.datetime_local_field :start_date, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= f.label :duration, "Durée (minutes)" %>
+      <%= f.number_field :duration, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= f.label :price, "Prix (€)" %>
+      <%= f.number_field :price, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= f.label :location, "Lieu" %>
+      <%= f.text_field :location, class: "form-control" %>
+    </div>
+    <%= f.submit "Créer", class: "btn btn-primary" %>
+  <% end %>
+</div>

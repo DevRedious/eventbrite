@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><%= @event.title %></h1>
+  <p><%= @event.description %></p>
+  <p><strong>Date de début :</strong> <%= @event.start_date.strftime("%d/%m/%Y %H:%M") %></p>
+  <p><strong>Date de fin :</strong> <%= @event.end_date.strftime("%d/%m/%Y %H:%M") %></p>
+  <p><strong>Lieu :</strong> <%= @event.location %></p>
+  <p><strong>Prix :</strong> <%= @event.price %> €</p>
+  <p><strong>Nombre d'inscrits :</strong> <%= @event.attendances.size %></p>
+  <p><strong>Créateur :</strong> <%= @event.user.email %></p>
+  <%= link_to "Retour à la liste", events_path, class: "btn btn-secondary" %>
+</div>

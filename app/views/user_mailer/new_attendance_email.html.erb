@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Nouvelle inscription</h1>
+    <p><%= @attendee.first_name %> <%= @attendee.last_name %> s'est inscrit(e) à ton événement "<%= @event.title %>".</p>
+    <p>Date : <%= @event.start_date %> · Lieu : <%= @event.location %></p>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Profil</h1>
+  <p><strong>Prénom :</strong> <%= @user.first_name %></p>
+  <p><strong>Nom :</strong> <%= @user.last_name %></p>
+  <p><strong>Description :</strong> <%= @user.description %></p>
+  <p><strong>Email :</strong> <%= @user.email %></p>
+  <%= link_to "Modifier email / mot de passe", edit_user_registration_path, class: "btn btn-outline-primary" %>
+
+  <h2 class="mt-4">Mes événements</h2>
+  <ul>
+    <% @user.administered_events.each do |event| %>
+      <li><%= link_to event.title, event_path(event) %></li>
+    <% end %>
+  </ul>
+</div>
