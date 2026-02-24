@@ -37,7 +37,7 @@ jobs:
           bundler-cache: true
 
       - name: Scan for security vulnerabilities in JavaScript dependencies
-        run: bundle exec importmap audit
+        run: bundle exec ruby bin/importmap audit
 
   lint:
     runs-on: ubuntu-latest
@@ -126,6 +126,9 @@ jobs:
     steps:
       - name: Install packages
         run: sudo apt-get update && sudo apt-get install --no-install-recommends -y libpq-dev
+
+      - name: Set up Chrome
+        uses: browser-actions/setup-chrome@v1
 
       - name: Checkout code
         uses: actions/checkout@v6
