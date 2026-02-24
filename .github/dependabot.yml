@@ -1,12 +1,44 @@
 version: 2
 updates:
-- package-ecosystem: bundler
-  directory: "/"
-  schedule:
-    interval: weekly
-  open-pull-requests-limit: 10
-- package-ecosystem: github-actions
-  directory: "/"
-  schedule:
-    interval: weekly
-  open-pull-requests-limit: 10
+  - package-ecosystem: bundler
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+    labels:
+      - dependencies
+      - bundler
+    groups:
+      development-and-test:
+        patterns:
+          - "rubocop*"
+          - "brakeman"
+          - "bundler-audit"
+          - "capybara"
+          - "selenium*"
+          - "debug"
+          - "web-console"
+      default:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "rubocop*"
+          - "brakeman"
+          - "bundler-audit"
+          - "capybara"
+          - "selenium*"
+          - "debug"
+          - "web-console"
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(ci)"
+    labels:
+      - dependencies
+      - github-actions
