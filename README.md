@@ -1,6 +1,6 @@
-![Ruby 3.4.2](https://img.shields.io/badge/Ruby-3.4.2-CC342D?style=flat-square&logo=ruby&logoColor=white) ![Rails 8.1](https://img.shields.io/badge/Rails-8.1-CC0000?style=flat-square&logo=rubyonrails&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-316192?style=flat-square&logo=postgresql&logoColor=white) ![Bootstrap 5.3](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=flat-square&logo=bootstrap&logoColor=white) ![Devise 5](https://img.shields.io/badge/Devise-5.0-10B981?style=flat-square&logo=rubygems&logoColor=white) ![PWA](https://img.shields.io/badge/PWA-Rails_8-5A0FC8?style=flat-square&logo=pwa&logoColor=white)
-
 # Eventbrite
+
+![Ruby 3.4.2](https://img.shields.io/badge/Ruby-3.4.2-CC342D?style=flat-square&logo=ruby&logoColor=white) ![Rails 8.1](https://img.shields.io/badge/Rails-8.1-CC0000?style=flat-square&logo=rubyonrails&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-316192?style=flat-square&logo=postgresql&logoColor=white) ![Bootstrap 5.3](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=flat-square&logo=bootstrap&logoColor=white) ![Devise 5](https://img.shields.io/badge/Devise-5.0-10B981?style=flat-square&logo=rubygems&logoColor=white) ![PWA](https://img.shields.io/badge/PWA-Rails_8-5A0FC8?style=flat-square&logo=pwa&logoColor=white)
 
 Event listing app (The Hacking Project, Week 5). Browse events, create your own when signed in, and manage your profile. Auth with Devise, UI with Bootstrap 5, installable as a PWA.
 
@@ -32,13 +32,13 @@ Event listing app (The Hacking Project, Week 5). Browse events, create your own 
 
 ## Stack
 
-| Layer      | Tech |
-|-----------|------|
-| Language  | Ruby 3.4 |
-| Framework | Rails 8.1 |
-| Database  | PostgreSQL |
-| Auth      | Devise |
-| Front-end | Bootstrap 5, Turbo, Stimulus, importmap |
+| Layer     | Tech                                      |
+| --------- | ----------------------------------------- |
+| Language  | Ruby 3.4                                  |
+| Framework | Rails 8.1                                 |
+| Database  | PostgreSQL                                |
+| Auth      | Devise                                    |
+| Front-end | Bootstrap 5, Turbo, Stimulus, importmap   |
 | PWA       | Rails 8 native (manifest, service worker) |
 
 ---
@@ -93,17 +93,17 @@ Event listing app (The Hacking Project, Week 5). Browse events, create your own 
 
 ## Routes
 
-| Path | Controller | Description |
-|------|------------|-------------|
-| `/` | `events#index` | Home, list of events |
-| `/events/:id` | `events#show` | Event details |
-| `/events/new` | `events#new` | Create event form (auth required) |
-| `/users/:id` | `users#show` | User profile (owner only) |
-| `/users/sign_up` | Devise | Registration |
-| `/users/sign_in` | Devise | Sign in |
-| `/users/sign_out` | Devise | Sign out (DELETE) |
-| `/manifest` | PWA | Web app manifest |
-| `/service-worker` | PWA | Service worker script |
+| Path              | Controller     | Description                       |
+| ----------------- | -------------- | --------------------------------- |
+| `/`               | `events#index` | Home, list of events              |
+| `/events/:id`     | `events#show`  | Event details                     |
+| `/events/new`     | `events#new`   | Create event form (auth required) |
+| `/users/:id`      | `users#show`   | User profile (owner only)         |
+| `/users/sign_up`  | Devise         | Registration                      |
+| `/users/sign_in`  | Devise         | Sign in                           |
+| `/users/sign_out` | Devise         | Sign out (DELETE)                 |
+| `/manifest`       | PWA            | Web app manifest                  |
+| `/service-worker` | PWA            | Service worker script             |
 
 ---
 

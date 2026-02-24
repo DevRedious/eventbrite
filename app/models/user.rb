@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :first_name, :last_name, presence: true, allow_blank: true
   validates :description, length: { maximum: 500 }, allow_blank: true
   after_create :welcome_send
-  
+
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
   end
